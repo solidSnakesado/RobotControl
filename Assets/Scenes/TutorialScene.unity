@@ -427,8 +427,8 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 5
   m_Mass: 1
-  m_ParentAnchorPosition: {x: -4.3192113e-11, y: -0.00000044703484, z: 4.3028695e-11}
-  m_ParentAnchorRotation: {x: 0.0000000842937, y: 0.0000000842937, z: 0.7071071, w: 0.70710725}
+  m_ParentAnchorPosition: {x: 2.861533e-11, y: -0.00000044703341, z: -2.8650861e-11}
+  m_ParentAnchorRotation: {x: 0, y: -0.00000004214685, z: 0.70710707, w: 0.70710707}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_MatchAnchors: 1
@@ -708,6 +708,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9090ae501ff9cd459bec5271d40249c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfVisuals
+--- !u!4 &261514891 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
+  m_PrefabInstance: {fileID: 977052744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &263895605
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,7 +911,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302569987}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a69c7afebc5c06448ab9650c376b3fc, type: 3}
   m_Name: 
@@ -1502,6 +1507,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TargetPlacement
       objectReference: {fileID: 0}
+    - target: {fileID: 850690186460591414, guid: 43bef545df3e344c4a7e089ca90c15a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980278694990496136, guid: 43bef545df3e344c4a7e089ca90c15a0, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1651,6 +1664,7 @@ GameObject:
   - component: {fileID: 474622275}
   - component: {fileID: 474622274}
   - component: {fileID: 474622273}
+  - component: {fileID: 474622276}
   m_Layer: 0
   m_Name: left_gripper
   m_TagString: Untagged
@@ -1667,7 +1681,7 @@ Transform:
   m_GameObject: {fileID: 474622271}
   serializedVersion: 2
   m_LocalRotation: {x: 5.329073e-15, y: 0.00000011920923, z: -0.000000059604616, w: 1}
-  m_LocalPosition: {x: -2.8759215e-11, y: -0.00000029802322, z: 2.8666848e-11}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1701,8 +1715,8 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 5
   m_Mass: 1
-  m_ParentAnchorPosition: {x: -4.313882e-11, y: -0.0000004470349, z: 4.305712e-11}
-  m_ParentAnchorRotation: {x: 0.00000004214685, y: -0.7071071, z: 0.0000000842937, w: 0.70710725}
+  m_ParentAnchorPosition: {x: 5.7427837e-11, y: -0.00000014901019, z: -5.734613e-11}
+  m_ParentAnchorRotation: {x: -0.00000004214685, y: -0.7071071, z: -0.00000004214685, w: 0.70710725}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_MatchAnchors: 1
@@ -1770,6 +1784,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfLink
   IsBaseLink: 0
+--- !u!114 &474622276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474622271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ff65b2cb37d314297d1f7237c4f2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Robotics.PickAndPlace::SimpleGripper
+  breakForce: 600
 --- !u!1 &494263750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,8 +1907,8 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 5
   m_Mass: 1
-  m_ParentAnchorPosition: {x: -4.308376e-11, y: -0.00000044703626, z: -0.000000014858159}
-  m_ParentAnchorRotation: {x: -0.00000003161014, y: -0.00000007375699, z: 0.70710737, w: 0.70710725}
+  m_ParentAnchorPosition: {x: 0, y: -0.00000044703484, z: -0.000000014901161}
+  m_ParentAnchorRotation: {x: 0, y: 0.00000004214685, z: 0.70710707, w: 0.70710707}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_MatchAnchors: 1
@@ -2738,6 +2765,7 @@ GameObject:
   - component: {fileID: 775357074}
   - component: {fileID: 775357073}
   - component: {fileID: 775357072}
+  - component: {fileID: 775357075}
   m_Layer: 0
   m_Name: gripper_base
   m_TagString: Untagged
@@ -2753,7 +2781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775357070}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.49995184, y: 0.50000006, z: -0.5, w: 0.50004816}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: -0.5}
   m_LocalPosition: {x: -0.00000001024455, y: -0.014750004, z: 0.024600301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2762,7 +2790,7 @@ Transform:
   - {fileID: 1872758529}
   - {fileID: 518453720}
   m_Father: {fileID: 1566410451}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 270}
 --- !u!114 &775357072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2790,7 +2818,7 @@ ArticulationBody:
   serializedVersion: 5
   m_Mass: 1
   m_ParentAnchorPosition: {x: -0.000000025145717, y: -0.014750004, z: 0.02460045}
-  m_ParentAnchorRotation: {x: 0.000034183264, y: 0.70707333, z: 0.000034064054, w: 0.7071414}
+  m_ParentAnchorRotation: {x: -0.000000059604645, y: -0.70710725, z: 0, w: -0.70710725}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_MatchAnchors: 1
@@ -2858,6 +2886,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfLink
   IsBaseLink: 0
+--- !u!114 &775357075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775357070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0e2203829a66f499dc66383ad30e03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Robotics.PickAndPlace::GripperController
+  leftFinger: {fileID: 474622272}
+  rightFinger: {fileID: 1344051832}
+  leftPhysic: {fileID: 474622276}
+  rightPhysic: {fileID: 1344051836}
+  openPos: 0
+  closePos: -0.0125
+  moveSpeed: 5
+  movementAxis: 2
 --- !u!1001 &781760543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3664,6 +3712,18 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.64372
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.259
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113255398182140587, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -3677,6 +3737,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5601983281253769233, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
       propertyPath: m_Name
+      value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601983281253769233, guid: 3901759e6233748538fffdbc519c1a68, type: 3}
+      propertyPath: m_TagString
       value: Target
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4235,6 +4299,89 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfVisual
   geometryType: 3
+--- !u!1 &1154207718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1154207719}
+  - component: {fileID: 1154207721}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: HandCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1154207719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154207718}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0161, z: 0.0337}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1566410451}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1154207721
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154207718}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 1
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &1185530248
 GameObject:
   m_ObjectHideFlags: 0
@@ -4684,6 +4831,7 @@ GameObject:
   - component: {fileID: 1344051835}
   - component: {fileID: 1344051834}
   - component: {fileID: 1344051833}
+  - component: {fileID: 1344051836}
   m_Layer: 0
   m_Name: right_gripper
   m_TagString: Untagged
@@ -4699,15 +4847,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344051831}
   serializedVersion: 2
-  m_LocalRotation: {x: 1, y: 0.00000005965757, z: -0.00000010425507, w: 0.00029629451}
-  m_LocalPosition: {x: -2.8759215e-11, y: 0.00000029802322, z: 1.4794804e-10}
-  m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 591278692}
   - {fileID: 1072366222}
   m_Father: {fileID: 1772758708}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!114 &1344051833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4734,8 +4882,8 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 5
   m_Mass: 1
-  m_ParentAnchorPosition: {x: -4.313882e-11, y: 0.0000004470349, z: 2.2186525e-10}
-  m_ParentAnchorRotation: {x: 0.70710737, y: -0.00020949093, z: -0.70710725, w: 0.00020953307}
+  m_ParentAnchorPosition: {x: 5.7427837e-11, y: 0.00000014901016, z: 1.4565274e-10}
+  m_ParentAnchorRotation: {x: 0.7071071, y: -0.00000009483041, z: -0.70710725, w: 0.00000003161014}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_MatchAnchors: 1
@@ -4803,6 +4951,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfLink
   IsBaseLink: 0
+--- !u!114 &1344051836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344051831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ff65b2cb37d314297d1f7237c4f2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Robotics.PickAndPlace::SimpleGripper
+  breakForce: 600
 --- !u!1 &1365497556
 GameObject:
   m_ObjectHideFlags: 0
@@ -4896,6 +5057,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9090ae501ff9cd459bec5271d40249c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfVisuals
+--- !u!1 &1399653788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1399653789}
+  - component: {fileID: 1399653790}
+  m_Layer: 0
+  m_Name: GraspDatasetCollector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1399653789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399653788}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1399653790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399653788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06a94af882062f44bff2152a18d4c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Robotics.PickAndPlace::GraspDatasetCollector
+  targetCube: {fileID: 261514891}
+  robotIKTarget: {fileID: 1424730199}
+  gripper: {fileID: 775357075}
+  handCamera: {fileID: 1154207721}
+  spawnRangeX: {x: -0.3, y: 0.3}
+  spawnRangeZ: {x: -0.19, y: -0.21}
+  tableHeight: 0.64372
+  robotSpeed: 0.75
+  observationHeight: 0.25
+  positionNoise: 0.1
+  datasetFolder: Assets/Dataset/
 --- !u!1 &1421207455
 GameObject:
   m_ObjectHideFlags: 0
@@ -4942,6 +5158,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfCollision
   geometryType: 3
+--- !u!1 &1424730198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1424730199}
+  m_Layer: 0
+  m_Name: Robot_IK_Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1424730199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424730198}
+  serializedVersion: 2
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1 &1436149045
 GameObject:
   m_ObjectHideFlags: 0
@@ -5502,6 +5749,7 @@ GameObject:
   - component: {fileID: 1566410454}
   - component: {fileID: 1566410453}
   - component: {fileID: 1566410452}
+  - component: {fileID: 1566410455}
   m_Layer: 0
   m_Name: tool_link
   m_TagString: Untagged
@@ -5525,6 +5773,7 @@ Transform:
   - {fileID: 1579417253}
   - {fileID: 256334772}
   - {fileID: 775357071}
+  - {fileID: 1154207719}
   m_Father: {fileID: 2055189846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1566410452
@@ -5622,6 +5871,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfLink
   IsBaseLink: 0
+--- !u!114 &1566410455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566410450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ca45bb53dc94f478358a1b6475653d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DitzelGames.FastIK.FastIKFabric
+  ChainLength: 6
+  Target: {fileID: 1424730199}
+  Pole: {fileID: 0}
+  Iterations: 10
+  Delta: 0.001
+  SnapBackStrength: 1
 --- !u!1 &1574321412
 GameObject:
   m_ObjectHideFlags: 8
@@ -6075,8 +6342,8 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 5
   m_Mass: 1
-  m_ParentAnchorPosition: {x: -4.3192113e-11, y: -0.00000044703484, z: 4.3028695e-11}
-  m_ParentAnchorRotation: {x: 0.7071072, y: -0.7071073, z: 0.00020957521, w: 0.00020949093}
+  m_ParentAnchorPosition: {x: 2.861533e-11, y: -0.00000044703341, z: -2.8650861e-11}
+  m_ParentAnchorRotation: {x: 0.70710695, y: -0.70710707, z: 0.00020944877, w: 0.00020936449}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_MatchAnchors: 1
@@ -7372,3 +7639,5 @@ SceneRoots:
   - {fileID: 451371861}
   - {fileID: 302569990}
   - {fileID: 186630}
+  - {fileID: 1399653789}
+  - {fileID: 1424730199}
